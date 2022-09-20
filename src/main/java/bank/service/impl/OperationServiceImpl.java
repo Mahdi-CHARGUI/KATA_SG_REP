@@ -13,8 +13,6 @@ public class OperationServiceImpl implements OperationService {
         //display account name and number
         System.out.println("Name :" + account.getName() + " bank.model.Account Number : " + account.getAccountNum() + "\n Operations : ");
         //display all the operations
-        for (Operation operation : account.getOperations()) {
-            System.out.println(operation);
-        }
+        account.getOperations().forEach(operation -> System.out.println(operation));
     }
 }
